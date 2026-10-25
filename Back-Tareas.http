@@ -1,0 +1,33 @@
+@Back_Tareas_HostAddress = http://localhost:5122
+
+### Listar tareas
+GET {{Back_Tareas_HostAddress}}/api/v1/tareas
+Accept: application/json
+
+### Obtener una tarea
+GET {{Back_Tareas_HostAddress}}/api/v1/tareas/1
+Accept: application/json
+
+### Crear una tarea
+POST {{Back_Tareas_HostAddress}}/api/v1/tareas
+Content-Type: application/json
+
+{
+  "titulo": "Preparar demostracion de C# y .NET",
+  "descripcion": "Mostrar las operaciones basicas de un gestor de tareas.",
+  "fechaVencimiento": "2026-11-01T18:00:00Z"
+}
+
+### Actualizar una tarea
+PUT {{Back_Tareas_HostAddress}}/api/v1/tareas/1
+Content-Type: application/json
+
+{
+  "titulo": "Preparar demostracion de C# y .NET",
+  "descripcion": "Completar la demostracion basica.",
+  "fechaVencimiento": "2026-11-01T18:00:00Z",
+  "completada": true
+}
+
+### Eliminar una tarea
+DELETE {{Back_Tareas_HostAddress}}/api/v1/tareas/1
